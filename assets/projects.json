@@ -1,0 +1,26 @@
+ [
+  {
+    "category": "Design",
+    "description": "Creative Template",
+    "image": "./assets/cuteDog.png",
+    "color": "yellow"
+  },
+  {
+    "category": "Development",
+    "description": "Creative Development",
+    "image": "./assets/cuteDog.png",
+    "color": "purple"
+  },
+  {
+    "category": "Branding",
+    "description": "Amazing Startup",
+    "image": "./assets/tiredWoman.png",
+    "color": "orange"
+  },
+  {
+    "category": "Products",
+    "description": "Amazing Products",
+    "image": "./assets/tiredWoman.png",
+    "color": "green"
+  }
+]

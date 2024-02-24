@@ -1,0 +1,365 @@
+:root {
+  --orange: #ff564f;
+  --orangeHover: #fd817c;
+  --yellow: #f8e71c;
+  --green: #417505;
+  --purple: #9013fe;
+  --black: #000000;
+  --white: #ffffff;
+  --whiteHover: #f0f0f0;
+  --halfBlack: #11111180;
+  --halfwhite: #ffffff80;
+}
+
+body {
+  font-family: "Inknut Antiqua";
+  box-sizing: border-box;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: 1170px;
+  margin: auto;
+}
+
+.inknutAntiqua {
+  font-size: 72px;
+  font-weight: 900;
+  line-height: 80px;
+  font-family: "Inknut Antiqua";
+}
+
+.DMsans {
+  font-family: "DM sans";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.robotoCondensed {
+  font-family: "Roboto Condensed";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 3px;
+}
+
+hr {
+  height: 2px;
+  color: var(--black);
+  background-color: var(--black);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 0;
+  width: 1170px;
+}
+
+.hidden {
+  visibility: hidden;
+  /* width: 0; */
+}
+
+/* Nav Section ######################################################################################*/
+
+#navSection {
+  background-color: var(--black);
+  color: var(--white);
+  height: 700px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.navbar__nav {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  align-items: center;
+}
+
+.navbar__nav__items {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  align-items: center;
+}
+
+.navbar__nav__items a {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.navbar__nav__items a:hover {
+  text-decoration: underline;
+}
+
+.toggleNavBtn {
+  background-color: var(--black);
+  padding: 8px;
+  border: none;
+  color: var(--white);
+}
+
+.toggleNavBtn:hover {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.banner h2 {
+  max-width: 80%;
+  position: relative;
+  z-index: 10;
+}
+
+.banner {
+  position: relative;
+  margin-top: 146px;
+}
+
+.banner__subtext {
+  letter-spacing: 3px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 40%;
+  gap: 44px;
+  position: relative;
+  z-index: 10;
+}
+
+.banner_picture {
+  position: absolute;
+  right: 0;
+  top: 23px;
+  z-index: 0;
+}
+
+.banner_picture__pic {
+  background-color: var(--orange);
+  border-radius: 3px;
+  position: absolute;
+  z-index: 1;
+  width: 570px;
+  height: 624px;
+  top: 90px;
+  right: 90px;
+}
+
+.banner_picture__pic img {
+  padding-top: 50px;
+  width: 120%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.navBtnSection {
+  position: relative;
+}
+
+.navBtnSection__container {
+  height: 340px;
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.navBtnSection__btn {
+  background-color: var(--orange);
+  height: 48px;
+  width: 48px;
+  padding-top: 4px;
+  border: none;
+  border-radius: 100px;
+}
+
+.navBtnSection__btn:hover {
+  background-color: var(--orangeHover);
+}
+
+.navBtnSection__pageNo {
+  font-size: 24px;
+  letter-spacing: 6px;
+  line-height: 32px;
+  margin-left: 16px;
+}
+
+/* Advantage Section ######################################################################### */
+
+.advantageContainer {
+  width: 100%;
+  padding: 148px 0 240px 0;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.advantageSection__ImgDiv {
+  position: relative;
+  width: calc(1170px / 2);
+}
+
+.advantageSection__ImgDiv img {
+  position: absolute;
+  left: -150px;
+}
+
+.advantageSection__ImgDiv__btn {
+  width: 110px;
+  height: 110px;
+  border: none;
+  border-radius: 100px;
+  background-color: var(--white);
+  color: var(--orange);
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.17);
+  position: absolute;
+  top: 48%;
+  right: 53%;
+}
+
+.advantageSection__ImgDiv__btn:hover {
+  background-color: var(--whiteHover);
+}
+
+.advantageSection__ImgDiv__btn svg {
+  margin: 18px 10px 10px 14px;
+}
+
+.advantageSection__textDiv {
+  width: calc(1170px / 2);
+}
+
+.advantageSection__textDiv h2 {
+  position: relative;
+}
+
+.advantageSection__textDiv h4 {
+  color: var(--halfBlack);
+  max-width: 470px;
+}
+
+.advantageSection__btn {
+  width: 170px;
+  height: 48px;
+  border: none;
+  border-radius: 3px;
+}
+
+.advantage__learnBtn {
+  background-color: var(--orange);
+  color: var(--white);
+  letter-spacing: 1px;
+}
+
+.advantage__learnBtn:hover {
+  background-color: var(--orangeHover);
+}
+
+.advantage__exploreBtn {
+  margin-left: 10px;
+  background: none;
+}
+
+.advantage__exploreBtn:hover {
+  text-decoration: underline;
+}
+
+/* Features Section ######################################################################### */
+
+.featureSection {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 140px 0 80px 0;
+}
+
+.featureSection p {
+  margin: 0;
+  color: var(--halfwhite);
+}
+
+.featureSection_textDiv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.featureSection_textDiv h3 {
+  margin: 0;
+  font-size: 56px;
+  line-height: 64px;
+}
+
+.featureSection_featureDiv {
+  margin-top: 132px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.featureCard {
+  padding: 48px;
+}
+
+.featureCard h5 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 1px;
+  margin: 16px 0;
+}
+
+.featureSection_dotsdiv {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.dotsdiv_dot {
+  border-radius: 10px;
+  height: 6px;
+  width: 6px;
+  background-color: var(--halfwhite);
+}
+
+.activeDot {
+  background-color: var(--purple);
+}
+
+/* Projects Section ######################################################################### */
+
+.projectsHeader {
+  padding: 100px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+  position: relative;
+}
+
+.projectsHeader h2 {
+  margin: 0;
+  font-size: 56px;
+  line-height: 64px;
+}
