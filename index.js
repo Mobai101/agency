@@ -7,10 +7,7 @@ const blogContainer = document.querySelector(".blog_contentDiv");
 // variable init
 let currentCategory = "All";
 
-// 3-line button that toggle navigation in desktop view
-toggleNavBtn.addEventListener("click", () => {
-  navbarItems.classList.toggle("hidden");
-});
+// functions -----------------------------------------------------------------------------------------------------------------
 
 // Get categories from JSON and print to html
 const getCategories = async () => {
@@ -54,3 +51,10 @@ const getBlogs = async () => {
   });
 };
 getBlogs();
+
+// Event listeners ----------------------------------------------------------------------------------------------------------
+
+// 3-line button that toggle navigation in desktop view
+toggleNavBtn.addEventListener("click", () => {
+  navbarItems.classList.toggle("hidden");
+});

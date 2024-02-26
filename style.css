@@ -33,7 +33,7 @@ ul {
 }
 
 .container {
-  width: 1170px;
+  width: 73.125rem;
   margin: auto;
 }
 
@@ -69,7 +69,7 @@ hr {
   left: 50%;
   transform: translate(-50%, 0);
   bottom: 0;
-  width: 1170px;
+  width: 73.125rem;
 }
 
 .hidden {
@@ -458,6 +458,10 @@ hr {
   border-radius: 3px;
 }
 
+.projectBody_btn:hover {
+  background-color: var(--orangeHover);
+}
+
 .projectCard img {
   position: absolute;
   bottom: 0;
@@ -486,10 +490,7 @@ hr {
 .clientSay_cardDiv {
   display: flex;
   gap: 1.875rem;
-}
-
-.overflowHidden {
-  width: 40%;
+  width: 49.5vw;
   overflow-x: hidden;
   overflow-y: visible;
   position: absolute;
@@ -499,8 +500,8 @@ hr {
 
 .clientSay_card {
   padding: 3rem;
-  width: 29.375rem;
-  height: 32rem;
+  min-width: 29.375rem;
+  min-height: 32rem;
 }
 
 .clientSay_figure {
@@ -701,7 +702,7 @@ hr {
 }
 
 .footer_socialDiv a {
-  padding-top: 0.2rem;
+  padding-top: 0.3rem;
   width: 3rem;
   height: 3rem;
   background-color: var(--GreySocial);
