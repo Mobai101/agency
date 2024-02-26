@@ -1,26 +1,30 @@
- [
+[
   {
     "category": "Design",
     "description": "Creative Template",
     "image": "./assets/cuteDog.png",
-    "color": "yellow"
+    "backgroundColor": "yellow",
+    "textColor": "black"
   },
   {
     "category": "Development",
     "description": "Creative Development",
     "image": "./assets/cuteDog.png",
-    "color": "purple"
+    "backgroundColor": "purple",
+    "textColor": "white"
   },
   {
     "category": "Branding",
     "description": "Amazing Startup",
     "image": "./assets/tiredWoman.png",
-    "color": "orange"
+    "backgroundColor": "orange",
+    "textColor": "white"
   },
   {
     "category": "Products",
     "description": "Amazing Products",
     "image": "./assets/tiredWoman.png",
-    "color": "green"
+    "backgroundColor": "green",
+    "textColor": "black"
   }
 ]

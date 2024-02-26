@@ -1,6 +1,7 @@
 :root {
   --orange: #ff564f;
   --orangeHover: #fd817c;
+  --orangeSubcribe: #ff635c;
   --yellow: #f8e71c;
   --green: #417505;
   --purple: #9013fe;
@@ -9,12 +10,14 @@
   --whiteHover: #f0f0f0;
   --halfBlack: #11111180;
   --halfwhite: #ffffff80;
+  --GreySocial: #333333;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth !important;
 }
 
 body {
@@ -25,16 +28,21 @@ button {
   cursor: pointer;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .container {
   width: 1170px;
   margin: auto;
 }
 
 .inknutAntiqua {
-  font-size: 4.5rem;
+  font-size: 3.5rem;
   font-weight: 900;
-  line-height: 5rem;
+  line-height: 4rem;
   font-family: "Inknut Antiqua";
+  text-transform: uppercase;
 }
 
 .DMsans {
@@ -50,10 +58,11 @@ button {
   font-weight: 400;
   line-height: 2rem;
   letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
 hr {
-  height: 2px;
+  height: 3px;
   color: var(--black);
   background-color: var(--black);
   position: absolute;
@@ -70,7 +79,7 @@ hr {
 
 /* Nav Section ######################################################################################*/
 
-#navSection {
+.navSection {
   background-color: var(--black);
   color: var(--white);
   height: 44rem;
@@ -83,7 +92,7 @@ hr {
   justify-content: space-between;
 }
 
-.navbar_title {
+.site_title {
   font-weight: 700;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -128,6 +137,8 @@ hr {
 }
 
 .banner h2 {
+  font-size: 4.5rem;
+  line-height: 5rem;
   max-width: 80%;
   position: relative;
   z-index: 10;
@@ -148,6 +159,11 @@ hr {
   gap: 2.75rem;
   position: relative;
   z-index: 10;
+  margin-top: 3.25rem;
+}
+
+.banner_subtext svg {
+  transform: scale(1.5);
 }
 
 .banner_picture {
@@ -188,7 +204,7 @@ hr {
   gap: 0.5rem;
 }
 
-.navBtnSection_btn {
+.roundOrangeBtn {
   background-color: var(--orange);
   height: 3rem;
   width: 3rem;
@@ -197,7 +213,7 @@ hr {
   border-radius: 100px;
 }
 
-.navBtnSection_btn:hover {
+.roundOrangeBtn:hover {
   background-color: var(--orangeHover);
 }
 
@@ -212,7 +228,7 @@ hr {
 
 .advantageContainer {
   width: 100%;
-  padding: 9.25rem 0 15rem 0;
+  padding: 9.25rem 0 20rem 0;
   display: flex;
   gap: 1rem;
   justify-content: space-between;
@@ -253,16 +269,17 @@ hr {
   width: calc(1170px / 2);
 }
 
-.advantageSection_textDiv h2 {
-  position: relative;
+.advantageSection_textDiv h3 {
+  margin: 2rem 0;
 }
 
-.advantageSection_textDiv h4 {
+.advantageSection_textDiv p {
   color: var(--halfBlack);
   max-width: 30rem;
 }
 
 .advantageSection_btn {
+  margin-top: 2rem;
   width: 10.625rem;
   height: 3rem;
   border: none;
@@ -310,8 +327,6 @@ hr {
 
 .featureSection_textDiv h3 {
   margin: 0;
-  font-size: 3.5rem;
-  line-height: 4rem;
 }
 
 .featureSection_featureDiv {
@@ -365,12 +380,14 @@ hr {
 
 .projectsHeader h2 {
   margin: 0;
-  font-size: 3.5rem;
-  line-height: 4rem;
+}
+
+.projectsHeader p {
+  color: var(--halfBlack);
 }
 
 .projectBody {
-  margin-top: 4.75rem;
+  margin: 4.75rem 0;
   display: flex;
   gap: 8.125rem;
 }
@@ -406,15 +423,292 @@ hr {
 
 .projectBody_content {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
 .projectCard {
   border-radius: 3px;
   height: 26rem;
   padding: 3rem;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
 }
 
-.projectCard h3 {
+.projectTextDiv h3 {
   font-size: 2.5rem;
   line-height: 3rem;
+  margin-top: 0.75rem;
+}
+
+.projectTextDiv {
+  width: 18rem;
+}
+
+.projectBody_btn {
+  margin-top: 2.25rem;
+  align-self: center;
+  border: none;
+  background-color: var(--orange);
+  color: var(--white);
+  height: 3rem;
+  width: 10.625rem;
+  border-radius: 3px;
+}
+
+.projectCard img {
+  position: absolute;
+  bottom: 0;
+  right: 30%;
+  transform: translate(50%, 0);
+  max-height: 120%;
+}
+
+/* Client Say Section ######################################################################### */
+
+.clientSayTopSect {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 9.5rem 0;
+  position: relative;
+}
+
+.clientSay_textDiv {
+  width: 29rem;
+}
+
+.clientSay_textDiv h2 {
+  margin-bottom: 2rem;
+}
+
+.clientSay_cardDiv {
+  display: flex;
+  gap: 1.875rem;
+}
+
+.overflowHidden {
+  width: 40%;
+  overflow-x: hidden;
+  overflow-y: visible;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+}
+
+.clientSay_card {
+  padding: 3rem;
+  width: 29.375rem;
+  height: 32rem;
+}
+
+.clientSay_figure {
+  display: flex;
+  align-items: center;
+  gap: 1.625rem;
+  margin-bottom: 6.75rem;
+}
+
+.clientSay_figure img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100px;
+}
+
+.clientSay_figure h5 {
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.clientSay_blockquote p {
+  color: var(--halfwhite);
+}
+
+.clientSayBtnFlexContainer {
+  padding: 8.5rem 0;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.clientSayBottomSect {
+  position: relative;
+}
+
+/* Partner Section ######################################################################### */
+
+.partnerSect {
+  position: relative;
+}
+
+.partnerContainer {
+  height: 18rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Blog Post Section ######################################################################### */
+
+.blogSection {
+  margin: 6.5rem 0;
+}
+
+.blog_textDiv {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 5.5rem;
+}
+
+.blog_textDiv p {
+  max-width: 35.625rem;
+}
+
+.blog_contentDiv {
+  display: flex;
+  gap: 1.875rem;
+  flex-wrap: wrap;
+}
+
+.blog_card {
+  width: 23.125rem;
+}
+
+.blog_card img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.blog_card p {
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  line-height: 2rem;
+  margin: 0.75rem 0;
+}
+
+/* signup Section ######################################################################### */
+
+.signupSect {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 8rem 0;
+}
+
+.signupContainer {
+  position: relative;
+}
+
+.signupContainer hr {
+  background-color: var(--white);
+}
+
+.signupContainer h2 {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  font-weight: 900;
+  width: 23rem;
+  padding-bottom: 6.5rem;
+}
+
+.signup_form {
+  background-color: var(--orange);
+  gap: 2rem;
+  width: 29.375rem;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  position: absolute;
+  right: 10%;
+  bottom: -38%;
+  z-index: 10;
+  border-radius: 3px;
+}
+
+.signup_form input {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 3px;
+}
+
+.signup_form button {
+  color: var(--white);
+  font-weight: 700;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 3px;
+  background-color: var(--orangeSubcribe);
+}
+
+.signup_form button:hover {
+  background-color: var(--orangeHover);
+}
+
+/* Footer Section ######################################################################### */
+
+.footerSect {
+  padding: 5rem 0 7.25rem 0;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_titleDiv {
+  width: 8.9375rem;
+}
+
+.footerContainer h1 {
+  padding-bottom: 2rem;
+}
+
+.footerContainer h3 {
+  padding-bottom: 2rem;
+}
+
+.footer_addressDiv {
+  width: 12rem;
+}
+
+.footer_addressDiv p {
+  padding-bottom: 1rem;
+}
+
+.footer_menuDiv a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.footer_menuDiv a:hover {
+  text-decoration: underline;
+}
+
+.footer_socialDiv {
+  width: 16.875rem;
+}
+
+.footer_socialDiv nav {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.footer_socialDiv a {
+  padding-top: 0.2rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--GreySocial);
+  text-align: center;
+  border-radius: 100px;
+}
+
+.footer_socialDiv a:hover {
+  background-color: var(--halfwhite);
 }
