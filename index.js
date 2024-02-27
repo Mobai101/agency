@@ -87,7 +87,7 @@ const showClient = (clientNo) => {
   });
 };
 
-// initially show client 1
+// init show client
 showClient(currentClient);
 
 // Left button show prev client
