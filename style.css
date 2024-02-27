@@ -11,6 +11,7 @@
   --halfBlack: #11111180;
   --halfwhite: #ffffff80;
   --GreySocial: #333333;
+  --greyProjectSelect: #dadada;
 }
 
 * {
@@ -73,8 +74,7 @@ hr {
 }
 
 .hidden {
-  visibility: hidden;
-  /* width: 0; */
+  display: none !important;
 }
 
 /* Nav Section ######################################################################################*/
@@ -83,6 +83,7 @@ hr {
   background-color: var(--black);
   color: var(--white);
   height: 44rem;
+  overflow-x: clip;
 }
 
 .navbar {
@@ -103,6 +104,12 @@ hr {
   flex-direction: row;
   gap: 3.75rem;
   align-items: center;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.hideDesktopNav {
+  transform: translateX(150%);
 }
 
 .navbar_nav_items {
@@ -110,6 +117,7 @@ hr {
   flex-direction: row;
   gap: 3.75rem;
   align-items: center;
+  transition: transform 0.7s;
 }
 
 .navbar_nav_items a {
@@ -124,11 +132,17 @@ hr {
   text-decoration: underline;
 }
 
+.navbar_nav_items_mobile {
+  display: none;
+}
+
 .toggleNavBtn {
   background-color: var(--black);
   padding: 0.5rem;
   border: none;
   color: var(--white);
+  position: relative;
+  z-index: 10;
 }
 
 .toggleNavBtn:hover {
@@ -141,7 +155,7 @@ hr {
   line-height: 5rem;
   max-width: 80%;
   position: relative;
-  z-index: 10;
+  z-index: 1;
 }
 
 .banner {
@@ -198,7 +212,7 @@ hr {
 }
 
 .navBtnSection_container {
-  height: 340px;
+  height: 21.25rem;
   align-items: center;
   display: flex;
   gap: 0.5rem;
@@ -251,10 +265,32 @@ hr {
   border-radius: 10rem;
   background-color: var(--white);
   color: var(--orange);
-  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.17);
+  box-shadow: 0 6px 38px 0 rgba(31, 31, 31, 0.836);
   position: absolute;
-  top: 48%;
+  top: 60%;
   right: 53%;
+}
+
+.youtubeDiv {
+  text-align: center;
+}
+
+.youtube {
+  width: 35rem;
+  height: 19.6875rem;
+}
+
+.closeYoutubeBtn {
+  padding-top: 0.1rem;
+  border: none;
+  background-color: var(--greyProjectSelect);
+  border-radius: 100px;
+  height: 3rem;
+  width: 3rem;
+}
+
+.closeYoutubeBtn:hover {
+  opacity: 0.6;
 }
 
 .advantageSection_ImgDiv_btn:hover {
@@ -421,6 +457,10 @@ hr {
   border-radius: 3px;
 }
 
+.project_categorySelector {
+  display: none;
+}
+
 .projectBody_content {
   width: 100%;
   display: flex;
@@ -472,6 +512,10 @@ hr {
 
 /* Client Say Section ######################################################################### */
 
+.clientSaySection {
+  overflow-x: clip;
+}
+
 .clientSayTopSect {
   background-color: var(--black);
   color: var(--white);
@@ -487,12 +531,9 @@ hr {
   margin-bottom: 2rem;
 }
 
-.clientSay_cardDiv {
+/* .clientSay_cardDiv {
   display: flex;
   gap: 1.875rem;
-  width: 49.5vw;
-  overflow-x: hidden;
-  overflow-y: visible;
   position: absolute;
   top: 30%;
   left: 50%;
@@ -500,8 +541,25 @@ hr {
 
 .clientSay_card {
   padding: 3rem;
-  min-width: 29.375rem;
-  min-height: 32rem;
+  width: 29.375rem;
+  height: 32rem;
+} */
+
+.clientSay_cardDiv {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  overflow-x: clip;
+  height: 32rem;
+  width: 50%;
+}
+
+.clientSay_card {
+  position: absolute;
+  padding: 3rem;
+  width: 29.375rem;
+  height: 32rem;
+  transition: transform 0.3s ease-out;
 }
 
 .clientSay_figure {
@@ -613,6 +671,14 @@ hr {
   font-weight: 900;
   width: 23rem;
   padding-bottom: 6.5rem;
+}
+
+.desktopNewsletter {
+  display: block;
+}
+
+.mobileNewsletter {
+  display: none;
 }
 
 .signup_form {

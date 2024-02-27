@@ -1,13 +1,57 @@
-// Elements selection
+//#region General Section ##################################################################################
+
 const toggleNavBtn = document.querySelector(".toggleNavBtn");
-const navbarItems = document.querySelector(".navbar__nav__items");
-const categoryContainer = document.querySelector(".categoryContainer");
+const navbarItems = document.querySelector(".navbar_nav_items");
+const navbarMobileItems = document.querySelector(".navbar_nav_items_mobile");
+
 const blogContainer = document.querySelector(".blog_contentDiv");
 
+const categoryContainer = document.querySelector(".categoryContainer");
+const advantageImgDiv = document.querySelector(".advantageSection_ImgDiv");
+const youtubeBtn = document.querySelector(".advantageSection_ImgDiv_btn");
+const youtubeDiv = document.querySelector(".youtubeDiv");
+const closeYoutubeBtn = document.querySelector(".closeYoutubeBtn");
+
+const clientBtnLeft = document.querySelector(".clientBtnLeft");
+const clientBtnRight = document.querySelector(".clientBtnRight");
+const clientSayCardArr = document.querySelectorAll(".clientSay_card");
+
+//#endregion
+
+//#region nav Section ######################################################################################
+// 3-line button that toggle navigation
+toggleNavBtn.addEventListener("click", () => {
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+  if (!isMobile) {
+    // toggle desktop navigation
+    navbarItems.classList.toggle("hideDesktopNav");
+  } else {
+    // toggle mobile navigation
+    navbarMobileItems.classList.toggle("hidden");
+  }
+});
+
+//#endregion
+
+//#region Advantage Section ################################################################################
+// play button to open youtube video
+youtubeBtn.addEventListener("click", () => {
+  advantageImgDiv.classList.add("hidden");
+  youtubeDiv.classList.remove("hidden");
+});
+
+// Close youtube button
+closeYoutubeBtn.addEventListener("click", () => {
+  advantageImgDiv.classList.remove("hidden");
+  youtubeDiv.classList.add("hidden");
+});
+
+//#endregion
+
+//#region Projects Section #################################################################################
 // variable init
 let currentCategory = "All";
-
-// functions -----------------------------------------------------------------------------------------------------------------
 
 // Get categories from JSON and print to html
 const getCategories = async () => {
@@ -30,7 +74,39 @@ const getCategories = async () => {
   });
 };
 getCategories();
+//#endregion
 
+//#region client say Section ###############################################################################
+let currentClient = 1;
+const NoOfClient = clientSayCardArr.length;
+
+// Function receive client number and show the number to screen
+const showClient = (clientNo) => {
+  clientSayCardArr.forEach((card, index) => {
+    card.style.transform = `translateX(${(index - clientNo + 1) * 108}%)`;
+  });
+};
+
+// initially show client 1
+showClient(currentClient);
+
+// Left button show prev client
+clientBtnLeft.addEventListener("click", () => {
+  if (currentClient === 1) return;
+  currentClient--;
+  showClient(currentClient);
+});
+
+// right button show next client
+clientBtnRight.addEventListener("click", () => {
+  if (currentClient === NoOfClient) return;
+  currentClient++;
+  showClient(currentClient);
+});
+
+//#endregion
+
+//#region Blog Section #####################################################################################
 // Get Blog post from JSON and print to html
 const getBlogs = async () => {
   // Get projects data from JSON
@@ -52,9 +128,4 @@ const getBlogs = async () => {
 };
 getBlogs();
 
-// Event listeners ----------------------------------------------------------------------------------------------------------
-
-// 3-line button that toggle navigation in desktop view
-toggleNavBtn.addEventListener("click", () => {
-  navbarItems.classList.toggle("hidden");
-});
+//#endregion
