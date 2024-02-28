@@ -77,13 +77,17 @@ hr {
   display: none !important;
 }
 
+.opaque {
+  opacity: 0;
+  transition: none !important;
+}
+
 /* Nav Section ######################################################################################*/
 
 .navSection {
   background-color: var(--black);
   color: var(--white);
   height: 44rem;
-  overflow-x: clip;
 }
 
 .navbar {
@@ -150,17 +154,23 @@ hr {
   color: var(--black);
 }
 
+.banner {
+  overflow-x: clip;
+  margin-top: 9rem;
+  position: relative;
+}
+
+.bannerCard {
+  position: absolute;
+  transition: opacity 0.5s ease-in;
+}
+
 .banner h2 {
   font-size: 4.5rem;
   line-height: 5rem;
   max-width: 80%;
   position: relative;
-  z-index: 1;
-}
-
-.banner {
-  position: relative;
-  margin-top: 9rem;
+  z-index: 2;
 }
 
 .banner_subtext {
@@ -172,11 +182,12 @@ hr {
   max-width: 40%;
   gap: 2.75rem;
   position: relative;
-  z-index: 10;
+  z-index: 2;
   margin-top: 3.25rem;
 }
 
 .banner_subtext svg {
+  margin-left: 1rem;
   transform: scale(1.5);
 }
 
@@ -188,7 +199,7 @@ hr {
 }
 
 .banner_picture_pic {
-  background-color: var(--orange);
+  /* background-color: var(--orange); */
   border-radius: 3px;
   position: absolute;
   z-index: 1;
@@ -229,6 +240,10 @@ hr {
 
 .roundOrangeBtn:hover {
   background-color: var(--orangeHover);
+}
+
+.roundOrangeBtn:active {
+  transform: translateY(4px);
 }
 
 .navBtnSection_pageNo {
@@ -332,6 +347,10 @@ hr {
   background-color: var(--orangeHover);
 }
 
+.advantage_learnBtn:active {
+  transform: translateY(4px);
+}
+
 .advantage_exploreBtn {
   margin-left: 1rem;
   background: none;
@@ -366,15 +385,20 @@ hr {
 }
 
 .featureSection_featureDiv {
+  overflow-x: clip;
   margin-top: 8.25rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.875rem;
-  align-items: center;
+  height: 18rem;
+  /* display: grid; */
+  /* grid-template-columns: 1fr 1fr; */
+  position: relative;
 }
 
 .featureCard {
+  position: absolute;
+  width: 35.625rem;
+  height: 18rem;
   padding: 3rem;
+  transition: transform 0.5s ease-out;
 }
 
 .featureCard h5 {
@@ -461,8 +485,14 @@ hr {
   display: none;
 }
 
-.projectBody_content {
+.projectBody_body {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.projectBody_contentContainer {
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -500,6 +530,10 @@ hr {
 
 .projectBody_btn:hover {
   background-color: var(--orangeHover);
+}
+
+.projectBody_btn:active {
+  transform: translateY(4px);
 }
 
 .projectCard img {
@@ -626,9 +660,9 @@ hr {
 }
 
 .blog_contentDiv {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.875rem;
-  flex-wrap: wrap;
 }
 
 .blog_card {
