@@ -428,6 +428,9 @@ hr {
 }
 
 /* Projects Section ######################################################################### */
+.projectSection {
+  overflow-x: clip;
+}
 
 .projectsHeader {
   padding: 6.25rem 0;
@@ -515,6 +518,8 @@ hr {
 
 .projectTextDiv {
   width: 18rem;
+  position: relative;
+  z-index: 1;
 }
 
 .projectBody_btn {
@@ -757,8 +762,8 @@ hr {
 }
 
 .footerContainer {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .footer_titleDiv {

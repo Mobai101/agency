@@ -160,10 +160,6 @@
 
   /* projects Section ######################################################################### */
 
-  .projectSection {
-    overflow-x: clip;
-  }
-
   .projectsHeader {
     grid-template-columns: 1fr;
   }
@@ -196,11 +192,6 @@
   .projectCard {
     padding: 1.75rem;
     height: 20rem;
-  }
-
-  .projectTextDiv {
-    position: relative;
-    z-index: 1;
   }
 
   .projectCard img {
@@ -257,6 +248,10 @@
     gap: 3.25rem;
   }
 
+  .partnerContainer a {
+    transform: scale(1);
+  }
+
   /* blog Section ######################################################################### */
 
   .blog_textDiv {
@@ -274,11 +269,7 @@
   }
 
   .blog_card img {
-    width: 88vw;
-  }
-
-  .blog_card p {
-    letter-spacing: 0px;
+    width: 100%;
   }
 
   /* sign up Section ######################################################################### */
@@ -293,6 +284,7 @@
 
   .signupContainer h2 {
     width: 88vw;
+    padding-bottom: 5rem;
   }
 
   .desktopNewsletter {
@@ -310,8 +302,12 @@
 
   /* footer Section ######################################################################### */
 
+  .footerSect {
+    padding-top: 0;
+  }
+
   .footerContainer {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 5rem;
   }
 }

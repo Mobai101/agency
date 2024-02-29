@@ -129,16 +129,16 @@ featureDotContainer.addEventListener("click", (e) => {
 
 // swipe left event, go to next feature
 featureSwipe.on("swipeleft", () => {
-  const isMobile = window.matchMedia("(max-width: 480px)").matches;
-  if (!isMobile || currentFeature === noOfFeature) return;
+  const isTablet = window.matchMedia("(max-width: 1170px)").matches;
+  if (!isTablet || currentFeature === noOfFeature) return;
   currentFeature++;
   showFeature(currentFeature);
 });
 
 // swipe right event, go back to prev feature
 featureSwipe.on("swiperight", () => {
-  const isMobile = window.matchMedia("(max-width: 480px)").matches;
-  if (!isMobile || currentFeature === 1) return;
+  const isTablet = window.matchMedia("(max-width: 1170px)").matches;
+  if (!isTablet || currentFeature === 1) return;
   currentFeature--;
   showFeature(currentFeature);
 });
@@ -314,13 +314,13 @@ clientBtnRight.addEventListener("click", () => {
 // swipe action for mobile view to change slide
 const clientSwipe = new Hammer(clientCardDiv);
 clientSwipe.on("swipeleft", () => {
-  const isMobile = window.matchMedia("(max-width: 480px)").matches;
-  if (!isMobile) return;
+  const isTablet = window.matchMedia("(max-width: 1170px)").matches;
+  if (!isTablet) return;
   nextClient();
 });
 clientSwipe.on("swiperight", () => {
-  const isMobile = window.matchMedia("(max-width: 480px)").matches;
-  if (!isMobile) return;
+  const isTablet = window.matchMedia("(max-width: 1170px)").matches;
+  if (!isTablet) return;
   prevClient();
 });
 
