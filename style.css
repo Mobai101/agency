@@ -203,7 +203,6 @@ hr {
 }
 
 .banner_picture_pic {
-  /* background-color: var(--orange); */
   border-radius: 3px;
   position: absolute;
   z-index: 1;

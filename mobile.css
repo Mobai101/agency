@@ -70,6 +70,7 @@
   .banner_picture {
     right: 0;
     transform: translateY(120%);
+    top: 1.5rem;
   }
 
   .banner_picture svg {
