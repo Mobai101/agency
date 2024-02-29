@@ -87,7 +87,9 @@ hr {
 .navSection {
   background-color: var(--black);
   color: var(--white);
-  height: 44rem;
+  /* Update this height to go back to fixed height for banner section ############################### */
+  /* height: 44rem; */
+  height: 100vh;
 }
 
 .navbar {
@@ -156,7 +158,9 @@ hr {
 
 .banner {
   overflow-x: clip;
-  margin-top: 9rem;
+  /* Update this margin top to go back to fixed height for banner section ############################### */
+  /* margin-top: 9rem; */
+  margin-top: 30vh;
   position: relative;
 }
 
