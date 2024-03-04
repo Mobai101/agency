@@ -121,7 +121,18 @@ featureDotContainer.addEventListener("click", (e) => {
   const dotNumber = Number(e.target.dataset.dot);
 
   // if the dot is the last dot, reject action
-  if (dotNumber === noOfFeature) return;
+  if (dotNumber === noOfFeature) {
+    showFeature(noOfFeature - 1);
+
+    const nearLastDot = document
+      .querySelector(`[data-dot="${noOfFeature - 1}"]`)
+      .classList.remove("activeDot");
+
+    const lastDot = document
+      .querySelector(`[data-dot="${noOfFeature}"]`)
+      .classList.add("activeDot");
+    return;
+  }
 
   currentFeature = dotNumber;
   showFeature(currentFeature);
