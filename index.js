@@ -248,11 +248,15 @@ const showCategories = (allProj, curCat) => {
 
 // Get categories from JSON and print to html
 const getCategories = async () => {
-  // Get projects data from JSON
-  const response = await fetch("./data/projects.json");
-  allProjects = await response.json();
+  try {
+    // Get projects data from JSON
+    const response = await fetch("./data/projects.json");
+    allProjects = await response.json();
 
-  showCategories(allProjects, "All");
+    showCategories(allProjects, "All");
+  } catch (error) {
+    console.log(error);
+  }
 };
 getCategories();
 
@@ -343,22 +347,26 @@ const blogContainer = document.querySelector(".blog_contentDiv");
 
 // Get Blog post from JSON and print to html
 const getBlogs = async () => {
-  // Get projects data from JSON
-  const response = await fetch("./data/blogs.json");
-  const blogs = await response.json();
+  try {
+    // Get projects data from JSON
+    const response = await fetch("./data/blogs.json");
+    const blogs = await response.json();
 
-  // print each blog
-  blogs.forEach((blog) => {
-    blogContainer.insertAdjacentHTML(
-      "beforeend",
-      `<div class="blog_card">
+    // print each blog
+    blogs.forEach((blog) => {
+      blogContainer.insertAdjacentHTML(
+        "beforeend",
+        `<div class="blog_card">
       <img src="./assets/${blog.image}" alt="${blog.title}" />
       <h4 class="robotoCondensed">${blog.title}</h4>
       <p class="robotoCondensed">${blog.description}</p>
       <h5 class="DMsans">${blog.date}</h5>
     </div>`
-    );
-  });
+      );
+    });
+  } catch (error) {
+    console.log(error);
+  }
 };
 getBlogs();
 
