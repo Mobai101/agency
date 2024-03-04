@@ -120,8 +120,9 @@ featureDotContainer.addEventListener("click", (e) => {
   if (e.target.tagName !== "SPAN") return;
   const dotNumber = Number(e.target.dataset.dot);
 
+  const isTablet = window.matchMedia("(max-width: 1170px)").matches;
   // if the dot is the last dot, reject action
-  if (dotNumber === noOfFeature) {
+  if (dotNumber === noOfFeature && !isTablet) {
     showFeature(noOfFeature - 1);
 
     const nearLastDot = document
