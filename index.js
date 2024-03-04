@@ -176,7 +176,7 @@ const showCategories = (allProj, curCat) => {
   categoryContainer.innerHTML = "";
 
   // filter the projects list to current project
-  filteredProjects = allProjects.filter((val) => {
+  filteredProjects = allProj.filter((val) => {
     if (curCat === "All") {
       return true;
     } else {
@@ -243,7 +243,11 @@ const showCategories = (allProj, curCat) => {
     );
   });
 
-  loadMoreProjectBtn.classList.remove("hidden");
+  if (filteredProjects.length > 2) {
+    loadMoreProjectBtn.classList.remove("hidden");
+  } else {
+    loadMoreProjectBtn.classList.add("hidden");
+  }
 };
 
 // Get categories from JSON and print to html
