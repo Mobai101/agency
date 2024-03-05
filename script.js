@@ -190,19 +190,23 @@ const showCategories = (allProj, curCat) => {
   // print "All" category
   categoryContainer.insertAdjacentHTML(
     "beforeend",
-    `<button class="DMsans category_button ${
-      curCat === "All" ? "activeCategory" : ""
-    }">All</button>`
+    `<button class="DMsans category_button">All</button>`
   );
 
   // print each categories
   allProj.forEach((proj) => {
     categoryContainer.insertAdjacentHTML(
       "beforeend",
-      `<button class="DMsans category_button ${
-        curCat === proj.category ? "activeCategory" : ""
-      }">${proj.category}</button>`
+      `<button class="DMsans category_button">${proj.category}</button>`
     );
+  });
+
+  // if category is active, add class and disable the category button
+  document.querySelectorAll(".category_button").forEach((btn) => {
+    if (btn.textContent === curCat) {
+      btn.classList.add("activeCategory");
+      btn.disabled = true;
+    }
   });
 
   // remove all current selection in mobile

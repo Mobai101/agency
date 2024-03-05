@@ -470,11 +470,19 @@ hr {
   padding: 0;
   border: none;
   background: none;
-  transition: padding 0.5s;
 }
 
 .category_button:hover {
   text-decoration: underline;
+}
+
+@keyframes growPadding {
+  from {
+    padding: 0;
+  }
+  to {
+    padding: 0 1rem;
+  }
 }
 
 .activeCategory {
@@ -482,6 +490,7 @@ hr {
   color: var(--white);
   padding: 0 1rem;
   border-radius: 3px;
+  animation: growPadding 0.2s ease-out;
 }
 
 .activeCategory:hover {
