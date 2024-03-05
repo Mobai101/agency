@@ -88,8 +88,8 @@ hr {
   background-color: var(--black);
   color: var(--white);
   /* Update this height to go back to fixed height for banner section ############################### */
-  /* height: 44rem; */
-  height: 100vh;
+  height: 44rem;
+  /* height: 100vh; */
 }
 
 .navbar {
@@ -159,8 +159,8 @@ hr {
 .banner {
   overflow-x: clip;
   /* Update this margin top to go back to fixed height for banner section ############################### */
-  /* margin-top: 9rem; */
-  margin-top: 30vh;
+  margin-top: 9rem;
+  /* margin-top: 30vh; */
   position: relative;
 }
 
@@ -188,11 +188,6 @@ hr {
   position: relative;
   z-index: 2;
   margin-top: 3.25rem;
-}
-
-.banner_subtext svg {
-  margin-left: 1rem;
-  transform: scale(1.5);
 }
 
 .banner_picture {
@@ -487,6 +482,10 @@ hr {
   border-radius: 3px;
 }
 
+.activeCategory:hover {
+  text-decoration: none;
+}
+
 .project_categorySelector {
   display: none;
 }
@@ -649,6 +648,10 @@ hr {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.partner__a:hover {
+  opacity: 0.5;
 }
 
 /* Blog Post Section ######################################################################### */

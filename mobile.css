@@ -63,10 +63,6 @@
     padding-left: 0.9rem;
   }
 
-  .banner_subtext svg {
-    transform: scale(2);
-  }
-
   .banner_picture {
     right: 0;
     transform: translateY(120%);
