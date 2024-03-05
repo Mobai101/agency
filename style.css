@@ -105,6 +105,11 @@ hr {
   line-height: 2rem;
 }
 
+.site_title a {
+  color: var(--white);
+  text-decoration: none;
+}
+
 .navbar_nav {
   display: flex;
   flex-direction: row;
@@ -114,9 +119,9 @@ hr {
   overflow-x: hidden;
 }
 
-.hideDesktopNav {
+/* .hideDesktopNav {
   transform: translateX(150%);
-}
+} */
 
 .navbar_nav_items {
   display: flex;
@@ -149,12 +154,13 @@ hr {
   color: var(--white);
   position: relative;
   z-index: 10;
+  display: none;
 }
 
-.toggleNavBtn:hover {
+/* .toggleNavBtn:hover {
   background-color: var(--white);
   color: var(--black);
-}
+} */
 
 .banner {
   overflow-x: clip;
@@ -228,16 +234,12 @@ hr {
 }
 
 .roundOrangeBtn {
-  background-color: var(--orange);
-  height: 3rem;
-  width: 3rem;
-  padding-top: 0.25rem;
   border: none;
   border-radius: 100px;
 }
 
 .roundOrangeBtn:hover {
-  background-color: var(--orangeHover);
+  opacity: 0.7;
 }
 
 .roundOrangeBtn:active {
@@ -790,6 +792,11 @@ hr {
 
 .footer_addressDiv p {
   padding-bottom: 1rem;
+}
+
+.footer_addressDiv a {
+  color: var(--white);
+  text-decoration: none;
 }
 
 .footer_menuDiv a {

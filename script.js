@@ -5,15 +5,18 @@ const navbarMobileItems = document.querySelector(".navbar_nav_items_mobile");
 
 // 3-line button that toggle navigation
 toggleNavBtn.addEventListener("click", () => {
-  const isMobile = window.matchMedia("(max-width: 480px)").matches;
-  if (!isMobile) {
-    // toggle desktop navigation
-    navbarItems.classList.toggle("hideDesktopNav");
-  } else {
-    // toggle mobile navigation
-    navbarMobileItems.classList.toggle("hidden");
+  navbarMobileItems.classList.toggle("hidden");
+});
+
+document.addEventListener("click", (e) => {
+  if (
+    !navbarMobileItems.contains(e.target) &&
+    !toggleNavBtn.contains(e.target)
+  ) {
+    navbarMobileItems.classList.add("hidden");
   }
 });
+
 //#endregion
 
 //#region Banner section ###################################################################################
