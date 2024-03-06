@@ -45,6 +45,10 @@
     height: calc(90vw / (16 / 9));
   }
 
+  .youtubeDiv {
+    width: auto;
+  }
+
   .advantageSection_textDiv {
     width: 60vw;
   }

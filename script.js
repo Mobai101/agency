@@ -8,6 +8,7 @@ toggleNavBtn.addEventListener("click", () => {
   navbarMobileItems.classList.toggle("hidden");
 });
 
+// Click outside of navDiv to close nav
 document.addEventListener("click", (e) => {
   if (
     !navbarMobileItems.contains(e.target) &&

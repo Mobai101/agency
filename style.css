@@ -297,6 +297,7 @@ hr {
 
 .youtubeDiv {
   text-align: center;
+  width: calc(1170px / 2);
 }
 
 .youtube {
