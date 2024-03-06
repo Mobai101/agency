@@ -692,6 +692,11 @@ hr {
 
 .blog_card {
   width: 23.125rem;
+  cursor: pointer;
+}
+
+.blog_card:hover {
+  opacity: 0.7;
 }
 
 .blog_card img {
