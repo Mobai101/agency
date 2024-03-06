@@ -430,6 +430,7 @@ hr {
   height: 0.625rem;
   width: 0.625rem;
   background-color: var(--halfwhite);
+  cursor: pointer;
 }
 
 .activeDot {
