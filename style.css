@@ -606,6 +606,7 @@ hr {
   overflow-x: clip;
   height: 32rem;
   width: 50%;
+  z-index: 5;
 }
 
 .clientSay_card {
